@@ -2,67 +2,86 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bautista Signorile | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="BS.png"> 
+  <!-- Devicon CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <!-- Tu CSS -->
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
-  <header>
-    <img src="tu-foto.jpg" alt="Tu foto">
+
+  <!-- ====== Header ====== -->
+  <header class="header">
+    <img src="tu-foto.jpg" alt="Foto de perfil" class="profile-pic">
     <h1>Bautista Signorile</h1>
-    <p>Desarrollador FullStack | Apasionado por la tecnologia</p>
-    <nav>
-      <a href="CV.pdf">📄 CV</a>
-      <a href="https://www.linkedin.com/in/bautista-signorile-8790b6242/">LinkedIn</a>
-      <a href="https://github.com/signorilebautista">GitHub</a>
-    </nav>
+    <p>Desarrollador Full Stack | Apasionado por la tecnología</p>
+  
+    <div class="header-buttons">
+      <a href="CV.pdf" target="_blank" class="btn">📄 Ver CV</a>
+      <a href="https://www.linkedin.com/in/bautista-signorile-8790b6242/" target="_blank" class="btn">💼 LinkedIn</a>
+      <a href="https://github.com/signorilebautista" target="_blank" class="btn">🐙 GitHub</a>
+    </div>
   </header>
 
+  <!-- ====== Tecnologías ====== -->
   <section id="tecnologias">
-  <h2>Tecnologías</h2>
-  <div class="tech-carousel">
-    <div class="tech-track">
-      <i class="fab fa-csharp"></i>
-      <i class="fab fa-js-square"></i>
-      <i class="fas fa-database"></i>
-      <i class="fab fa-react"></i>
-      <i class="fab fa-node-js"></i>
-      <i class="fas fa-database"></i>
-      <i class="fas fa-leaf"></i>
-      <i class="fab fa-github"></i>
-      <i class="fab fa-html5"></i>
-      <i class="fab fa-css3-alt"></i>
-      <!-- 👇 duplicamos íconos para que el carrusel sea infinito -->
-      <i class="fab fa-csharp"></i>
-      <i class="fab fa-js-square"></i>
-      <i class="fas fa-database"></i>
-      <i class="fab fa-react"></i>
-      <i class="fab fa-node-js"></i>
-      <i class="fas fa-database"></i>
-      <i class="fas fa-leaf"></i>
-      <i class="fab fa-github"></i>
-      <i class="fab fa-html5"></i>
-      <i class="fab fa-css3-alt"></i>
-    </div>
-  </div>
-</section>
-  <section id="proyectos">
-    <h2>🚀 Proyectos</h2>
-    <div class="proyectos">
-      <div class="card">
-        <img src="proyecto1.png" alt="Proyecto 1">
-        <h3>Sistema web para administrar emprendimiento</h3>
-        <p>Diseñamos un sistema para que nuestro cliente de una forma facil e interactiva pueda controlar su stock, eliminar o agregar sus productos.</p>
-        <a href="https://github.com/lucasvalinottiIES/adminCalamates">Ver en GitHub</a>
-      </div>
-      <div class="card">
-        <img src="proyecto2.png" alt="Proyecto 2">
-        <h3>LandPage CalaMates</h3>
-        <p>Catalogo web para nuestro cliente con carrito el cual manda una respuesta a mensaje directo.</p>
-        <a href="https://github.com/lucasvalinottiIES/calamates">Ver en GitHub</a>
+    <h2>🛠 Tecnologías</h2>
+    <div class="tech-carousel">
+      <div class="tech-track">
+        <i class="devicon-csharp-plain colored"></i>
+        <i class="devicon-javascript-plain colored"></i>
+        <i class="devicon-microsoftsqlserver-plain colored"></i>
+        <i class="devicon-react-original colored"></i>
+        <i class="devicon-nodejs-plain colored"></i>
+        <i class="devicon-mysql-original colored"></i>
+        <i class="devicon-mongodb-plain colored"></i>
+        <i class="devicon-github-original"></i>
+        <i class="devicon-html5-plain colored"></i>
+        <i class="devicon-css3-plain colored"></i>
+  
+        <!-- duplicamos para loop infinito -->
+        <i class="devicon-csharp-plain colored"></i>
+        <i class="devicon-javascript-plain colored"></i>
+        <i class="devicon-microsoftsqlserver-plain colored"></i>
+        <i class="devicon-react-original colored"></i>
+        <i class="devicon-nodejs-plain colored"></i>
+        <i class="devicon-mysql-original colored"></i>
+        <i class="devicon-mongodb-plain colored"></i>
+        <i class="devicon-github-original"></i>
+        <i class="devicon-html5-plain colored"></i>
+        <i class="devicon-css3-plain colored"></i>
       </div>
     </div>
   </section>
+  
+
+  <!-- ====== Proyectos ====== -->
+  <!-- 🚀 Proyectos -->
+<section id="proyectos">
+    <h2>💻 Proyectos</h2>
+    <div class="proyectos">
+      
+      <div class="card">
+        <h3>Sistema web de administrador</h3>
+        <p>Sistema web para administrador de emprendimiento</p>
+        <a href="https://github.com/lucasvalinottiIES/adminCalamates" target="_blank">Ver en GitHub</a>
+      </div>
+  
+      <div class="card">
+        <h3>LandPage CalaMates</h3>
+        <p>Catalogo web para emprendimiento de venta de mates</p>
+        <a href="https://github.com/lucasvalinottiIES/calamates" target="_blank">Ver en GitHub</a>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- ====== Footer ====== -->
+  <footer>
+    <p>© 2025 Bautista Signorile. Todos los derechos reservados.</p>
+  </footer>
+
 </body>
 </html>

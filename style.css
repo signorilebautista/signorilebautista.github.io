@@ -78,31 +78,36 @@ section h2 {
 }
 
 /* 🛠 Tecnologías (Carrusel) */
+/* 🛠 Tecnologías (Carrusel) */
 .tech-carousel {
   overflow: hidden;
-  position: relative;
   width: 100%;
   margin: 40px auto;
+  position: relative;
 }
 
 .tech-track {
   display: flex;
-  gap: 40px;
-  animation: scroll 20s linear infinite;
+  gap: 60px; /* separación entre íconos */
+  justify-content: center;
+  align-items: center;
+  animation: scroll 30s linear infinite; /* velocidad */
+  width: max-content;
 }
 
 .tech-track i {
-  font-size: 80px; /* íconos más grandes */
-  color: #6a11cb;
-  transition: transform 0.3s ease;
+  font-size: 80px; /* tamaño grande */
+  flex-shrink: 0; /* evita que se achiquen */
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
 }
 
 .tech-track i:hover {
   transform: scale(1.2);
-  color: #a4508b;
+  filter: drop-shadow(0 0 10px #a4508b);
 }
 
-/* Animación carrusel */
+/* Animación carrusel infinito */
 @keyframes scroll {
   from {
     transform: translateX(0);
@@ -111,7 +116,6 @@ section h2 {
     transform: translateX(-50%);
   }
 }
-
 /* 🚀 Proyectos */
 .proyectos {
   display: grid;

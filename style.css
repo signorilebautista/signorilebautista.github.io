@@ -1,143 +1,164 @@
-/* --- Reset básico --- */
+/* 🎨 Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* 🖤 Estilo general */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f7f5fb;
-  color: #333;
   line-height: 1.6;
-  text-align: center;
-  overflow-x: hidden;
+  background: #f7f5fa;
+  color: #2d2d2d;
 }
 
-/* --- Encabezado --- */
-.hero {
-  background: linear-gradient(135deg, #6a11cb, #b83af3);
+/* 🔝 Encabezado */
+header {
+  background: linear-gradient(135deg, #6a11cb, #a4508b);
   color: white;
+  text-align: center;
   padding: 60px 20px;
-  animation: fadeIn 1.2s ease-in-out;
 }
 
-.profile-pic {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  border: 4px solid white;
+header img {
+  width: 160px;
+  height: 160px;
   object-fit: cover;
-  margin-bottom: 15px;
+  border-radius: 50%;  /* círculo perfecto */
+  border: 5px solid #fff;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-.hero h1 {
-  font-size: 2.5em;
+header h1 {
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
-.hero p {
-  font-size: 1.2em;
+header p {
+  font-size: 1.2rem;
   opacity: 0.9;
 }
 
-/* --- Sección Tecnologías --- */
-.tecnologias {
-  padding: 50px 20px;
-  animation: fadeIn 1.5s ease-in-out;
+/* 🔗 Navegación */
+nav {
+  margin-top: 20px;
 }
 
-.tecnologias h2 {
-  font-size: 2em;
-  margin-bottom: 25px;
-  color: #5b0ba5;
+nav a {
+  display: inline-block;
+  margin: 0 12px;
+  padding: 10px 18px;
+  background: #9d4edd;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s ease;
 }
 
-.iconos {
+nav a:hover {
+  background: #7b2cbf;
+  transform: scale(1.05);
+}
+
+/* 📌 Secciones */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #5a189a;
+  text-align: center;
+}
+
+/* 🛠 Tecnologías con íconos */
+#tecnologias .tech-icons {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 25px;
+  margin-top: 20px;
 }
 
-.iconos i {
-  font-size: 60px;
-  color: #6a11cb;
-  animation: zoom 2s infinite ease-in-out;
-  transition: transform 0.3s ease, color 0.3s ease;
+#tecnologias .tech-icons img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease;
 }
 
-/* Animación infinita de zoom */
-@keyframes zoom {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-    color: #b83af3;
-  }
+#tecnologias .tech-icons img:hover {
+  transform: scale(1.2);
 }
 
-/* --- Sección Proyectos --- */
+/* 🚀 Proyectos */
 .proyectos {
-  padding: 50px 20px;
-  animation: fadeIn 2s ease-in-out;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
 }
 
-.proyectos h2 {
-  font-size: 2em;
-  margin-bottom: 25px;
-  color: #5b0ba5;
-}
-
-.proyecto {
+.card {
   background: white;
   border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   padding: 20px;
-  margin: 20px auto;
-  max-width: 500px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeInUp 1.5s ease forwards;
-  opacity: 0;
 }
 
-.proyecto:nth-child(1) { animation-delay: 0.3s; }
-.proyecto:nth-child(2) { animation-delay: 0.6s; }
-
-.proyecto:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
-.proyecto img {
-  max-width: 100%;
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;
 }
 
-.proyecto h3 {
-  color: #6a11cb;
+.card h3 {
+  margin-bottom: 10px;
+  color: #7b2cbf;
+}
+
+.card p {
+  font-size: 0.95rem;
   margin-bottom: 10px;
 }
 
-/* --- Animaciones Fade --- */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+.card a {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 14px;
+  background: #9d4edd;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s ease;
 }
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
+.card a:hover {
+  background: #7b2cbf;
 }
 
-/* --- Footer --- */
-footer {
-  background-color: #f0ebf9;
-  color: #333;
-  padding: 20px;
-  margin-top: 40px;
-  font-size: 0.9em;
-  animation: fadeIn 2.5s ease-in-out;
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    margin: 6px;
+    padding: 8px 12px;
+  }
 }

@@ -1,141 +1,143 @@
-/* ====== General ====== */
-body {
-  font-family: 'Arial', sans-serif;
-  background: #f4f4f9;
-  color: #333;
+/* --- Reset básico --- */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* ====== Header ====== */
-.header {
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f5fb;
+  color: #333;
+  line-height: 1.6;
   text-align: center;
+  overflow-x: hidden;
+}
+
+/* --- Encabezado --- */
+.hero {
+  background: linear-gradient(135deg, #6a11cb, #b83af3);
+  color: white;
   padding: 60px 20px;
-  background: linear-gradient(135deg, #6a11cb, #a4508b);
-  color: #fff;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
-.header h1 {
-  font-size: 3rem;
-  margin: 20px 0 10px;
-}
-
-.header p {
-  font-size: 1.2rem;
-}
-
-/* Foto redonda */
 .profile-pic {
-  width: 180px;
-  height: 180px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
+  border: 4px solid white;
   object-fit: cover;
-  border: 4px solid #fff;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  margin-bottom: 15px;
 }
 
-/* ====== Tecnologías ====== */
-#tecnologias {
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #6a11cb, #a4508b);
-  color: #fff;
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
 }
 
-#tecnologias h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
+.hero p {
+  font-size: 1.2em;
+  opacity: 0.9;
 }
 
-/* Contenedor de íconos */
-.tech-container {
+/* --- Sección Tecnologías --- */
+.tecnologias {
+  padding: 50px 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.tecnologias h2 {
+  font-size: 2em;
+  margin-bottom: 25px;
+  color: #5b0ba5;
+}
+
+.iconos {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 30px;
 }
 
-/* Íconos grandes con efecto hover */
-.tech-container i {
-  font-size: 80px; /* tamaño grande */
-  transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease;
-  cursor: pointer;
-  color: #fff; /* color inicial blanco */
+.iconos i {
+  font-size: 60px;
+  color: #6a11cb;
+  animation: zoom 2s infinite ease-in-out;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Hover con zoom + glow + color original */
-.tech-container i:hover {
-  transform: scale(1.3);
-  filter: drop-shadow(0 0 20px #fff);
+/* Animación infinita de zoom */
+@keyframes zoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+    color: #b83af3;
+  }
 }
 
-/* Colores originales al hacer hover por clase Devicon */
-.devicon-csharp-plain:hover { color: #68217A; }
-.devicon-javascript-plain:hover { color: #F7DF1E; }
-.devicon-microsoftsqlserver-plain:hover { color: #CC2927; }
-.devicon-react-original:hover { color: #61DBFB; }
-.devicon-nodejs-plain:hover { color: #3C873A; }
-.devicon-mysql-original:hover { color: #00758F; }
-.devicon-mongodb-plain:hover { color: #47A248; }
-.devicon-github-original:hover { color: #181717; }
-.devicon-html5-plain:hover { color: #E34F26; }
-.devicon-css3-plain:hover { color: #1572B6; }
-
-/* ====== Proyectos ====== */
-#proyectos {
-  padding: 60px 20px;
-  background: #f4f4f9;
-  text-align: center;
+/* --- Sección Proyectos --- */
+.proyectos {
+  padding: 50px 20px;
+  animation: fadeIn 2s ease-in-out;
 }
 
-#proyectos h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
+.proyectos h2 {
+  font-size: 2em;
+  margin-bottom: 25px;
+  color: #5b0ba5;
 }
 
-/* Contenedor de cards */
-.projects-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-}
-
-/* Cada card de proyecto */
-.project-card {
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  overflow: hidden;
-  width: 300px;
+.proyecto {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1.5s ease forwards;
+  opacity: 0;
 }
 
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(106,17,203,0.4); /* violeta glow */
+.proyecto:nth-child(1) { animation-delay: 0.3s; }
+.proyecto:nth-child(2) { animation-delay: 0.6s; }
+
+.proyecto:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-.project-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+.proyecto img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
-.project-card h3 {
-  margin: 20px 15px 10px;
-  font-size: 1.5rem;
+.proyecto h3 {
+  color: #6a11cb;
+  margin-bottom: 10px;
 }
 
-.project-card p {
-  margin: 0 15px 20px;
-  color: #555;
+/* --- Animaciones Fade --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* ====== Footer ====== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Footer --- */
 footer {
-  text-align: center;
-  padding: 30px 20px;
-  background: linear-gradient(135deg, #6a11cb, #a4508b);
-  color: #fff;
+  background-color: #f0ebf9;
+  color: #333;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9em;
+  animation: fadeIn 2.5s ease-in-out;
 }

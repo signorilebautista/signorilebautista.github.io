@@ -95,6 +95,14 @@ section h2 {
 #tecnologias .tech-icons img:hover {
   transform: scale(1.2);
 }
+.tech-icons i {
+  font-size: 60px;
+  transition: transform 0.3s ease;
+}
+
+.tech-icons i:hover {
+  transform: scale(1.2);
+}
 
 
 /* 🚀 Proyectos */
